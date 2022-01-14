@@ -1,0 +1,584 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		92FE54EA279199450058D214 /* HeroesMVVMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FE54E9279199450058D214 /* HeroesMVVMApp.swift */; };
+		92FE54EC279199450058D214 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FE54EB279199450058D214 /* ContentView.swift */; };
+		92FE54EE2791994A0058D214 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92FE54ED2791994A0058D214 /* Assets.xcassets */; };
+		92FE54F12791994A0058D214 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92FE54F02791994A0058D214 /* Preview Assets.xcassets */; };
+		92FE54FB2791994B0058D214 /* HeroesMVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FE54FA2791994B0058D214 /* HeroesMVVMTests.swift */; };
+		92FE55052791994B0058D214 /* HeroesMVVMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FE55042791994B0058D214 /* HeroesMVVMUITests.swift */; };
+		92FE55072791994B0058D214 /* HeroesMVVMUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FE55062791994B0058D214 /* HeroesMVVMUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		92FE54F72791994B0058D214 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92FE54DE279199450058D214 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92FE54E5279199450058D214;
+			remoteInfo = HeroesMVVM;
+		};
+		92FE55012791994B0058D214 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92FE54DE279199450058D214 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92FE54E5279199450058D214;
+			remoteInfo = HeroesMVVM;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		92FE54E6279199450058D214 /* HeroesMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeroesMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		92FE54E9279199450058D214 /* HeroesMVVMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesMVVMApp.swift; sourceTree = "<group>"; };
+		92FE54EB279199450058D214 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		92FE54ED2791994A0058D214 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		92FE54F02791994A0058D214 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		92FE54F62791994B0058D214 /* HeroesMVVMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeroesMVVMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		92FE54FA2791994B0058D214 /* HeroesMVVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesMVVMTests.swift; sourceTree = "<group>"; };
+		92FE55002791994B0058D214 /* HeroesMVVMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeroesMVVMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		92FE55042791994B0058D214 /* HeroesMVVMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesMVVMUITests.swift; sourceTree = "<group>"; };
+		92FE55062791994B0058D214 /* HeroesMVVMUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesMVVMUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		92FE54E3279199450058D214 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92FE54F32791994B0058D214 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92FE54FD2791994B0058D214 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		92FE54DD279199450058D214 = {
+			isa = PBXGroup;
+			children = (
+				92FE54E8279199450058D214 /* HeroesMVVM */,
+				92FE54F92791994B0058D214 /* HeroesMVVMTests */,
+				92FE55032791994B0058D214 /* HeroesMVVMUITests */,
+				92FE54E7279199450058D214 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		92FE54E7279199450058D214 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				92FE54E6279199450058D214 /* HeroesMVVM.app */,
+				92FE54F62791994B0058D214 /* HeroesMVVMTests.xctest */,
+				92FE55002791994B0058D214 /* HeroesMVVMUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		92FE54E8279199450058D214 /* HeroesMVVM */ = {
+			isa = PBXGroup;
+			children = (
+				92FE54E9279199450058D214 /* HeroesMVVMApp.swift */,
+				92FE54EB279199450058D214 /* ContentView.swift */,
+				92FE54ED2791994A0058D214 /* Assets.xcassets */,
+				92FE54EF2791994A0058D214 /* Preview Content */,
+			);
+			path = HeroesMVVM;
+			sourceTree = "<group>";
+		};
+		92FE54EF2791994A0058D214 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				92FE54F02791994A0058D214 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		92FE54F92791994B0058D214 /* HeroesMVVMTests */ = {
+			isa = PBXGroup;
+			children = (
+				92FE54FA2791994B0058D214 /* HeroesMVVMTests.swift */,
+			);
+			path = HeroesMVVMTests;
+			sourceTree = "<group>";
+		};
+		92FE55032791994B0058D214 /* HeroesMVVMUITests */ = {
+			isa = PBXGroup;
+			children = (
+				92FE55042791994B0058D214 /* HeroesMVVMUITests.swift */,
+				92FE55062791994B0058D214 /* HeroesMVVMUITestsLaunchTests.swift */,
+			);
+			path = HeroesMVVMUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		92FE54E5279199450058D214 /* HeroesMVVM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92FE550A2791994B0058D214 /* Build configuration list for PBXNativeTarget "HeroesMVVM" */;
+			buildPhases = (
+				92FE54E2279199450058D214 /* Sources */,
+				92FE54E3279199450058D214 /* Frameworks */,
+				92FE54E4279199450058D214 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HeroesMVVM;
+			productName = HeroesMVVM;
+			productReference = 92FE54E6279199450058D214 /* HeroesMVVM.app */;
+			productType = "com.apple.product-type.application";
+		};
+		92FE54F52791994B0058D214 /* HeroesMVVMTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92FE550D2791994B0058D214 /* Build configuration list for PBXNativeTarget "HeroesMVVMTests" */;
+			buildPhases = (
+				92FE54F22791994B0058D214 /* Sources */,
+				92FE54F32791994B0058D214 /* Frameworks */,
+				92FE54F42791994B0058D214 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				92FE54F82791994B0058D214 /* PBXTargetDependency */,
+			);
+			name = HeroesMVVMTests;
+			productName = HeroesMVVMTests;
+			productReference = 92FE54F62791994B0058D214 /* HeroesMVVMTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		92FE54FF2791994B0058D214 /* HeroesMVVMUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92FE55102791994B0058D214 /* Build configuration list for PBXNativeTarget "HeroesMVVMUITests" */;
+			buildPhases = (
+				92FE54FC2791994B0058D214 /* Sources */,
+				92FE54FD2791994B0058D214 /* Frameworks */,
+				92FE54FE2791994B0058D214 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				92FE55022791994B0058D214 /* PBXTargetDependency */,
+			);
+			name = HeroesMVVMUITests;
+			productName = HeroesMVVMUITests;
+			productReference = 92FE55002791994B0058D214 /* HeroesMVVMUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		92FE54DE279199450058D214 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					92FE54E5279199450058D214 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					92FE54F52791994B0058D214 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 92FE54E5279199450058D214;
+					};
+					92FE54FF2791994B0058D214 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 92FE54E5279199450058D214;
+					};
+				};
+			};
+			buildConfigurationList = 92FE54E1279199450058D214 /* Build configuration list for PBXProject "HeroesMVVM" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 92FE54DD279199450058D214;
+			productRefGroup = 92FE54E7279199450058D214 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				92FE54E5279199450058D214 /* HeroesMVVM */,
+				92FE54F52791994B0058D214 /* HeroesMVVMTests */,
+				92FE54FF2791994B0058D214 /* HeroesMVVMUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		92FE54E4279199450058D214 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92FE54F12791994A0058D214 /* Preview Assets.xcassets in Resources */,
+				92FE54EE2791994A0058D214 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92FE54F42791994B0058D214 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92FE54FE2791994B0058D214 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		92FE54E2279199450058D214 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92FE54EC279199450058D214 /* ContentView.swift in Sources */,
+				92FE54EA279199450058D214 /* HeroesMVVMApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92FE54F22791994B0058D214 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92FE54FB2791994B0058D214 /* HeroesMVVMTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92FE54FC2791994B0058D214 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92FE55072791994B0058D214 /* HeroesMVVMUITestsLaunchTests.swift in Sources */,
+				92FE55052791994B0058D214 /* HeroesMVVMUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		92FE54F82791994B0058D214 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92FE54E5279199450058D214 /* HeroesMVVM */;
+			targetProxy = 92FE54F72791994B0058D214 /* PBXContainerItemProxy */;
+		};
+		92FE55022791994B0058D214 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92FE54E5279199450058D214 /* HeroesMVVM */;
+			targetProxy = 92FE55012791994B0058D214 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		92FE55082791994B0058D214 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		92FE55092791994B0058D214 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		92FE550B2791994B0058D214 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HeroesMVVM/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = es.dani.dev.HeroesMVVM;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		92FE550C2791994B0058D214 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HeroesMVVM/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = es.dani.dev.HeroesMVVM;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		92FE550E2791994B0058D214 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = es.dani.dev.HeroesMVVMTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HeroesMVVM.app/HeroesMVVM";
+			};
+			name = Debug;
+		};
+		92FE550F2791994B0058D214 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = es.dani.dev.HeroesMVVMTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HeroesMVVM.app/HeroesMVVM";
+			};
+			name = Release;
+		};
+		92FE55112791994B0058D214 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = es.dani.dev.HeroesMVVMUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HeroesMVVM;
+			};
+			name = Debug;
+		};
+		92FE55122791994B0058D214 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = es.dani.dev.HeroesMVVMUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HeroesMVVM;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		92FE54E1279199450058D214 /* Build configuration list for PBXProject "HeroesMVVM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92FE55082791994B0058D214 /* Debug */,
+				92FE55092791994B0058D214 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92FE550A2791994B0058D214 /* Build configuration list for PBXNativeTarget "HeroesMVVM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92FE550B2791994B0058D214 /* Debug */,
+				92FE550C2791994B0058D214 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92FE550D2791994B0058D214 /* Build configuration list for PBXNativeTarget "HeroesMVVMTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92FE550E2791994B0058D214 /* Debug */,
+				92FE550F2791994B0058D214 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92FE55102791994B0058D214 /* Build configuration list for PBXNativeTarget "HeroesMVVMUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92FE55112791994B0058D214 /* Debug */,
+				92FE55122791994B0058D214 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 92FE54DE279199450058D214 /* Project object */;
+}
