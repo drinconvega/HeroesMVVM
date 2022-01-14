@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		92FE54EA279199450058D214 /* HeroesMVVMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FE54E9279199450058D214 /* HeroesMVVMApp.swift */; };
-		92FE54EC279199450058D214 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FE54EB279199450058D214 /* ContentView.swift */; };
+		92FE54EC279199450058D214 /* HeroeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FE54EB279199450058D214 /* HeroeList.swift */; };
 		92FE54EE2791994A0058D214 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92FE54ED2791994A0058D214 /* Assets.xcassets */; };
 		92FE54F12791994A0058D214 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92FE54F02791994A0058D214 /* Preview Assets.xcassets */; };
 		92FE54FB2791994B0058D214 /* HeroesMVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FE54FA2791994B0058D214 /* HeroesMVVMTests.swift */; };
 		92FE55052791994B0058D214 /* HeroesMVVMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FE55042791994B0058D214 /* HeroesMVVMUITests.swift */; };
 		92FE55072791994B0058D214 /* HeroesMVVMUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FE55062791994B0058D214 /* HeroesMVVMUITestsLaunchTests.swift */; };
+		92FE551427919F7B0058D214 /* HeroeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FE551327919F7B0058D214 /* HeroeDetail.swift */; };
+		92FE55162791A0390058D214 /* DefaultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FE55152791A0390058D214 /* DefaultCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,7 @@
 /* Begin PBXFileReference section */
 		92FE54E6279199450058D214 /* HeroesMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeroesMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92FE54E9279199450058D214 /* HeroesMVVMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesMVVMApp.swift; sourceTree = "<group>"; };
-		92FE54EB279199450058D214 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		92FE54EB279199450058D214 /* HeroeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroeList.swift; sourceTree = "<group>"; };
 		92FE54ED2791994A0058D214 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92FE54F02791994A0058D214 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		92FE54F62791994B0058D214 /* HeroesMVVMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeroesMVVMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +46,8 @@
 		92FE55002791994B0058D214 /* HeroesMVVMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeroesMVVMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		92FE55042791994B0058D214 /* HeroesMVVMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesMVVMUITests.swift; sourceTree = "<group>"; };
 		92FE55062791994B0058D214 /* HeroesMVVMUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesMVVMUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		92FE551327919F7B0058D214 /* HeroeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroeDetail.swift; sourceTree = "<group>"; };
+		92FE55152791A0390058D214 /* DefaultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +98,11 @@
 		92FE54E8279199450058D214 /* HeroesMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				92FE551A2791B4B30058D214 /* Common */,
+				92FE55182791A0830058D214 /* HeroeDetail */,
+				92FE55172791A06F0058D214 /* HeroeList */,
 				92FE54E9279199450058D214 /* HeroesMVVMApp.swift */,
-				92FE54EB279199450058D214 /* ContentView.swift */,
-				92FE54ED2791994A0058D214 /* Assets.xcassets */,
+				92FE55192791A0960058D214 /* Resources */,
 				92FE54EF2791994A0058D214 /* Preview Content */,
 			);
 			path = HeroesMVVM;
@@ -125,6 +131,46 @@
 				92FE55062791994B0058D214 /* HeroesMVVMUITestsLaunchTests.swift */,
 			);
 			path = HeroesMVVMUITests;
+			sourceTree = "<group>";
+		};
+		92FE55172791A06F0058D214 /* HeroeList */ = {
+			isa = PBXGroup;
+			children = (
+				92FE54EB279199450058D214 /* HeroeList.swift */,
+			);
+			path = HeroeList;
+			sourceTree = "<group>";
+		};
+		92FE55182791A0830058D214 /* HeroeDetail */ = {
+			isa = PBXGroup;
+			children = (
+				92FE551327919F7B0058D214 /* HeroeDetail.swift */,
+			);
+			path = HeroeDetail;
+			sourceTree = "<group>";
+		};
+		92FE55192791A0960058D214 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				92FE54ED2791994A0058D214 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		92FE551A2791B4B30058D214 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				92FE551B2791B4BA0058D214 /* Cells */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		92FE551B2791B4BA0058D214 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				92FE55152791A0390058D214 /* DefaultCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +303,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92FE54EC279199450058D214 /* ContentView.swift in Sources */,
+				92FE54EC279199450058D214 /* HeroeList.swift in Sources */,
+				92FE55162791A0390058D214 /* DefaultCell.swift in Sources */,
 				92FE54EA279199450058D214 /* HeroesMVVMApp.swift in Sources */,
+				92FE551427919F7B0058D214 /* HeroeDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
