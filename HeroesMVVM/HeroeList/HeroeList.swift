@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct HeroeList: View {
-    let pruebas = ["Tipo1", "Tipo2", "Tipo3"]
+    
+    @ObservedObject var vm = HeroeListVM()
+    
     var body: some View {
         NavigationView {
             List {
-                ForEach(pruebas, id: \.self) { prueba in
+                ForEach(vm.heroes, id: \.self) { heroe in
                     NavigationLink(destination: HeroeDetail()) {
-                        DefaultCell(name: prueba)
+                        DefaultCell(name: heroe.name)
                     }
                 }
             }.listStyle(.plain)

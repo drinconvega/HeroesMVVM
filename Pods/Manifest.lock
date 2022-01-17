@@ -1,0 +1,33 @@
+PODS:
+  - Alamofire (4.9.1)
+  - AlamofireImage (3.6.0):
+    - Alamofire (~> 4.9)
+  - JSONDecoder-Keypath (0.1.0)
+  - NetworkReachability (0.2.1)
+  - Swinject (2.7.1)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.9)
+  - AlamofireImage (~> 3)
+  - JSONDecoder-Keypath
+  - NetworkReachability
+  - Swinject
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AlamofireImage
+    - JSONDecoder-Keypath
+    - NetworkReachability
+    - Swinject
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  AlamofireImage: be9963c6582d68b39e89191f64c82a7d7bf40fdd
+  JSONDecoder-Keypath: ab7a3cec83003a5f66455c28edecbf9110351818
+  NetworkReachability: 878e297ae7c19d72590d50ccad37766d0e6cabf4
+  Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
+
+PODFILE CHECKSUM: 945bbe0533d08cbe6c8e10f57682c55c9912ba64
+
+COCOAPODS: 1.10.2

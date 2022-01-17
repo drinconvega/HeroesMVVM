@@ -13,13 +13,11 @@ struct DefaultCell: View {
     
     var body: some View {
         HStack {
-            Image(systemName: "person").font(.title).padding()
-            VStack (alignment: .leading){
-                Text(name)
-                    .font(.headline)
-                Text("Hello, world!")
-                    .font(.footnote)
-            }
+            Image(systemName: "person")
+                .font(.title).padding()
+            Text(name)
+                .font(.headline)
+            Spacer()
         }
         
     }
@@ -30,6 +28,5 @@ struct DefaultCell_Previews: PreviewProvider {
         DefaultCell(name: "Tipo")
             .previewLayout(.fixed(width: 400, height: 60))
             .previewDisplayName("Default Cell")
-            
     }
 }
