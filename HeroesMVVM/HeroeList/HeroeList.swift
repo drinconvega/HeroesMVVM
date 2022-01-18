@@ -15,36 +15,37 @@ struct HeroeList: View {
         NavigationView {
             ZStack {
                 if vm.isLoading {
-                    ProgressView("Cargando...")
-                        .padding()
-                        .progressViewStyle(.circular)
+                    LoadingView()
+                        .background(Color(UIColor.lightGray)
+                                        .opacity(0.1))
+                        .cornerRadius(5)
                 }
                 
-                if vm.showErrorView {
-                    Text("Algo ha ido mal")
-                        .padding()
-                        .font(.title)
-                }else{
-                    List {
-                        ForEach(vm.heroes, id: \.self) { heroe in
-                            NavigationLink(destination: HeroeDetail(heroe: heroe)) {
-                                DefaultCell(heroe: heroe)
-                            }
+                
+                List {
+                    ForEach(vm.heroes, id: \.self) { heroe in
+                        NavigationLink(destination: HeroeDetail(heroe: heroe)) {
+                            DefaultCell(heroe: heroe)
                         }
-                        if vm.showLoadMore{
-                            HStack {
-                                Button("Load more") {
-                                    vm.getHeroesList()
-                                    
-                                }
-                            }.listRowInsets(EdgeInsets())
+                    }
+                    if vm.showLoadMore{
+                        HStack {
+                            Button("Load more") {
+                                vm.getHeroesList()
+                                
+                            }
+                        }.listRowInsets(EdgeInsets())
                             .frame(maxWidth: .infinity, minHeight: 60)
                             .background(Color(UIColor.systemGroupedBackground))
+                    }
+                }.listStyle(.plain)
+                    .alert("Ups!, something went wrong", isPresented: $vm.showErrorView) {
+                        Button("Retry") {
+                            vm.getHeroesList()
                         }
-                        
-                    }.listStyle(.plain)
-                        .navigationTitle("Heroes")
-                }
+                    }
+                    .navigationTitle("Heroes")
+                
             }
         }
     }

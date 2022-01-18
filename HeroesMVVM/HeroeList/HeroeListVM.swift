@@ -46,9 +46,9 @@ class HeroeListVM: ObservableObject, HeroesService {
                 }
                 self.showLoadMore = true
                 self.isLoading = false
-                self.heroes = heroes.data.results
                 self.page.limit += 15
                 self.page.offset += 15
+                self.heroes = heroes.data.results
         }
         cancellables.insert(cancellable)
     }
