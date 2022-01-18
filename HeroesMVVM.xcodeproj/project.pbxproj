@@ -20,11 +20,16 @@
 		92FE552027959EF70058D214 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FE551F27959EF70058D214 /* Page.swift */; };
 		92FE55222795A1950058D214 /* HeroeListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FE55212795A1950058D214 /* HeroeListVM.swift */; };
 		92FE55232795A1950058D214 /* HeroeListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FE55212795A1950058D214 /* HeroeListVM.swift */; };
-		92FE552D2795A6110058D214 /* BaseWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FE552A2795A6110058D214 /* BaseWebService.swift */; };
-		92FE552E2795A6110058D214 /* CharactersWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FE552C2795A6110058D214 /* CharactersWebService.swift */; };
-		92FE55312795AE0F0058D214 /* WebServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FE55302795AE0F0058D214 /* WebServiceError.swift */; };
 		92FE55342795AF3E0058D214 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FE55332795AF3E0058D214 /* String+Extensions.swift */; };
-		92FE55362795CDB90058D214 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FE55352795CDB90058D214 /* NetworkingError.swift */; };
+		92FE55382795E00B0058D214 /* HeroeDetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FE55372795E00B0058D214 /* HeroeDetailVM.swift */; };
+		92FE55392795E00B0058D214 /* HeroeDetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FE55372795E00B0058D214 /* HeroeDetailVM.swift */; };
+		92FE553E2796F2DF0058D214 /* APISession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FE553D2796F2DF0058D214 /* APISession.swift */; };
+		92FE55402796F2E70058D214 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FE553F2796F2E70058D214 /* APIError.swift */; };
+		92FE55422796F2F40058D214 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FE55412796F2F40058D214 /* APIService.swift */; };
+		92FE55442796F3000058D214 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FE55432796F3000058D214 /* RequestBuilder.swift */; };
+		92FE55472796F3EB0058D214 /* HeroesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FE55462796F3EB0058D214 /* HeroesService.swift */; };
+		92FE55492796F3F40058D214 /* HeroesEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FE55482796F3F40058D214 /* HeroesEndpoint.swift */; };
+		92FE554B2796F67A0058D214 /* CharacterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FE554A2796F67A0058D214 /* CharacterResponse.swift */; };
 		D29FF3C914A79D882E448E84 /* Pods_HeroesMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4B94502F98AC8A449ADE063 /* Pods_HeroesMVVM.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,12 +68,16 @@
 		92FE551D27959EE90058D214 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		92FE551F27959EF70058D214 /* Page.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		92FE55212795A1950058D214 /* HeroeListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroeListVM.swift; sourceTree = "<group>"; };
-		92FE552A2795A6110058D214 /* BaseWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseWebService.swift; sourceTree = "<group>"; };
-		92FE552C2795A6110058D214 /* CharactersWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharactersWebService.swift; sourceTree = "<group>"; };
 		92FE552F2795A6ED0058D214 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		92FE55302795AE0F0058D214 /* WebServiceError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServiceError.swift; sourceTree = "<group>"; };
 		92FE55332795AF3E0058D214 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
-		92FE55352795CDB90058D214 /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
+		92FE55372795E00B0058D214 /* HeroeDetailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroeDetailVM.swift; sourceTree = "<group>"; };
+		92FE553D2796F2DF0058D214 /* APISession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISession.swift; sourceTree = "<group>"; };
+		92FE553F2796F2E70058D214 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		92FE55412796F2F40058D214 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		92FE55432796F3000058D214 /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
+		92FE55462796F3EB0058D214 /* HeroesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesService.swift; sourceTree = "<group>"; };
+		92FE55482796F3F40058D214 /* HeroesEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesEndpoint.swift; sourceTree = "<group>"; };
+		92FE554A2796F67A0058D214 /* CharacterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterResponse.swift; sourceTree = "<group>"; };
 		D4B94502F98AC8A449ADE063 /* Pods_HeroesMVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HeroesMVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -190,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				92FE551327919F7B0058D214 /* HeroeDetail.swift */,
+				92FE55372795E00B0058D214 /* HeroeDetailVM.swift */,
 			);
 			path = HeroeDetail;
 			sourceTree = "<group>";
@@ -223,10 +233,9 @@
 		92FE551C27959ECC0058D214 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				92FE55302795AE0F0058D214 /* WebServiceError.swift */,
-				92FE55352795CDB90058D214 /* NetworkingError.swift */,
 				92FE551F27959EF70058D214 /* Page.swift */,
 				92FE551D27959EE90058D214 /* Character.swift */,
+				92FE554A2796F67A0058D214 /* CharacterResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -234,26 +243,10 @@
 		92FE55242795A32B0058D214 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				92FE55292795A6110058D214 /* Base */,
-				92FE552B2795A6110058D214 /* WebService */,
+				92FE55452796F3C80058D214 /* HeroesAPI */,
+				92FE553C2796F2CB0058D214 /* API */,
 			);
 			path = Networking;
-			sourceTree = "<group>";
-		};
-		92FE55292795A6110058D214 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				92FE552A2795A6110058D214 /* BaseWebService.swift */,
-			);
-			path = Base;
-			sourceTree = "<group>";
-		};
-		92FE552B2795A6110058D214 /* WebService */ = {
-			isa = PBXGroup;
-			children = (
-				92FE552C2795A6110058D214 /* CharactersWebService.swift */,
-			);
-			path = WebService;
 			sourceTree = "<group>";
 		};
 		92FE55322795AF2A0058D214 /* Extensions */ = {
@@ -262,6 +255,26 @@
 				92FE55332795AF3E0058D214 /* String+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		92FE553C2796F2CB0058D214 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				92FE553D2796F2DF0058D214 /* APISession.swift */,
+				92FE553F2796F2E70058D214 /* APIError.swift */,
+				92FE55412796F2F40058D214 /* APIService.swift */,
+				92FE55432796F3000058D214 /* RequestBuilder.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		92FE55452796F3C80058D214 /* HeroesAPI */ = {
+			isa = PBXGroup;
+			children = (
+				92FE55462796F3EB0058D214 /* HeroesService.swift */,
+				92FE55482796F3F40058D214 /* HeroesEndpoint.swift */,
+			);
+			path = HeroesAPI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -438,18 +451,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92FE552E2795A6110058D214 /* CharactersWebService.swift in Sources */,
 				92FE55342795AF3E0058D214 /* String+Extensions.swift in Sources */,
+				92FE554B2796F67A0058D214 /* CharacterResponse.swift in Sources */,
 				92FE54EC279199450058D214 /* HeroeList.swift in Sources */,
 				92FE55162791A0390058D214 /* DefaultCell.swift in Sources */,
 				92FE552027959EF70058D214 /* Page.swift in Sources */,
+				92FE55382795E00B0058D214 /* HeroeDetailVM.swift in Sources */,
+				92FE55422796F2F40058D214 /* APIService.swift in Sources */,
 				92FE55222795A1950058D214 /* HeroeListVM.swift in Sources */,
-				92FE55312795AE0F0058D214 /* WebServiceError.swift in Sources */,
+				92FE55492796F3F40058D214 /* HeroesEndpoint.swift in Sources */,
+				92FE55402796F2E70058D214 /* APIError.swift in Sources */,
 				92FE551E27959EE90058D214 /* Character.swift in Sources */,
+				92FE55472796F3EB0058D214 /* HeroesService.swift in Sources */,
 				92FE54EA279199450058D214 /* HeroesMVVMApp.swift in Sources */,
-				92FE552D2795A6110058D214 /* BaseWebService.swift in Sources */,
-				92FE55362795CDB90058D214 /* NetworkingError.swift in Sources */,
 				92FE551427919F7B0058D214 /* HeroeDetail.swift in Sources */,
+				92FE553E2796F2DF0058D214 /* APISession.swift in Sources */,
+				92FE55442796F3000058D214 /* RequestBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +475,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92FE55232795A1950058D214 /* HeroeListVM.swift in Sources */,
+				92FE55392795E00B0058D214 /* HeroeDetailVM.swift in Sources */,
 				92FE54FB2791994B0058D214 /* HeroesMVVMTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

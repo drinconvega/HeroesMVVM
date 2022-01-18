@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct HeroesMVVMApp: App {
+    
+    @StateObject var vm = HeroeListVM()
+    
     var body: some Scene {
         WindowGroup {
             HeroeList()
+                .environmentObject(vm)
         }
     }
 }

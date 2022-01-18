@@ -4,6 +4,23 @@
 <dict>
 	<key>API_KEY</key>
 	<string>2c03d3e9f4f7486a887411243f43261e</string>
+    <key>NSAppTransportSecurity</key>
+        <dict>
+            <key>NSExceptionDomains</key>
+            <dict>
+                <key>i.annihil.us</key>
+                <dict>
+                    <key>NSIncludesSubdomains</key>
+                    <true/>
+                    <key>NSExceptionAllowsInsecureHTTPLoads</key>
+                    <true/>
+                    <key>NSExceptionRequiresForwardSecrecy</key>
+                    <false/>
+                    <key>NSExceptionMinimumTLSVersion</key>
+                    <string>TLSv1.0</string>
+                </dict>
+            </dict>
+        </dict>
 	<key>PRIV_KEY</key>
 	<string>60852357c65f202c413098ea1a573eb9c844cb4e</string>
 	<key>SERVER_URL</key>

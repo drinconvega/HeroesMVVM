@@ -7,11 +7,7 @@ target 'HeroesMVVM' do
 
   # Pods for HeroesMVVM
 
-  pod 'Alamofire','~> 4.9' 
-  pod 'AlamofireImage','~> 3'
-  pod 'NetworkReachability'
   pod 'Swinject'
-  pod 'JSONDecoder-Keypath'
   
 
 end

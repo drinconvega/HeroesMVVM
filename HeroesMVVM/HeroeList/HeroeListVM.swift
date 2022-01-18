@@ -7,34 +7,43 @@
 
 import Foundation
 import Combine
+import SwiftUI
 
-class HeroeListVM: ObservableObject {
+class HeroeListVM: ObservableObject, HeroesService {
     
-    @Published var heroes = [Character]() {
-        didSet {
-            didChange.send(self)
-        }
-    }
-    //En never se puede mer una funcion una enumeracion etc
-    let didChange = PassthroughSubject<HeroeListVM, Never>()
+    var apiSession: APIService
+    @Published var heroes = [Character]()
+    @Published var isLoading = false
+    @Published var showErrorView = false
     
-    private let charactersWS = CharactersWebService()
+    
+    var cancellables = Set<AnyCancellable>()
     var page = Page(limit: 15, offset: 0)
     
-    init() {
-        getHeroes()
+    init(apiSession: APIService = APISession()) {
+        self.apiSession = apiSession
+        getHeroesList(page: page)
     }
     
-    
-    
-    func getHeroes() {
-        charactersWS.getCharacters(page: self.page) { characters in
-            self.heroes = characters
-            self.page.offset += 15
-        } onError: { error in
-            
+    func getHeroesList(page: Page) {
+        self.isLoading = true
+        self.showErrorView = false
+        let cancellable = self.getHeroesList(page: page)
+            .sink(receiveCompletion: { result in
+                self.isLoading = false
+                switch result {
+                case .failure(let error):
+                    self.showErrorView = true
+                    print("Handle error: \(error)")
+                case .finished:
+                    break
+                }
+                
+            }) { (heroes) in
+                self.isLoading = false
+                self.heroes = heroes.data.results
+                self.page.offset += 15
         }
-
+        cancellables.insert(cancellable)
     }
-    
 }

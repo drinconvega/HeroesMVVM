@@ -9,18 +9,32 @@ import SwiftUI
 
 struct HeroeList: View {
     
-    @ObservedObject var vm = HeroeListVM()
+    @EnvironmentObject var vm : HeroeListVM
     
     var body: some View {
         NavigationView {
-            List {
-                ForEach(vm.heroes, id: \.self) { heroe in
-                    NavigationLink(destination: HeroeDetail()) {
-                        DefaultCell(name: heroe.name)
-                    }
+            ZStack {
+                if vm.isLoading {
+                    ProgressView("Cargando...")
+                        .padding()
+                        .progressViewStyle(.circular)
                 }
-            }.listStyle(.plain)
-            .navigationTitle("Heroes")
+                
+                if vm.showErrorView {
+                    Text("Algo ha ido mal")
+                        .padding()
+                        .font(.title)
+                }else{
+                    List {
+                        ForEach(vm.heroes, id: \.self) { heroe in
+                            NavigationLink(destination: HeroeDetail(heroe: heroe)) {
+                                DefaultCell(heroe: heroe)
+                            }
+                        }
+                    }.listStyle(.plain)
+                    .navigationTitle("Heroes")
+                }
+            }
         }
     }
 }
@@ -30,8 +44,10 @@ struct ContentView_Previews: PreviewProvider {
         Group {
             HeroeList()
                 .previewDevice("iPhone SE (2nd generation)")
+                .environmentObject(HeroeListVM())
             HeroeList()
                 .previewDevice("iPhone 13 Pro Max")
+                .environmentObject(HeroeListVM())
         }
     }
 }
