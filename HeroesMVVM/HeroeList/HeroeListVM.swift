@@ -15,6 +15,7 @@ class HeroeListVM: ObservableObject, HeroesService {
     @Published var heroes = [Character]()
     @Published var isLoading = false
     @Published var showErrorView = false
+    @Published var showLoadMore = false
     
     
     var cancellables = Set<AnyCancellable>()
@@ -22,10 +23,10 @@ class HeroeListVM: ObservableObject, HeroesService {
     
     init(apiSession: APIService = APISession()) {
         self.apiSession = apiSession
-        getHeroesList(page: page)
+        getHeroesList()
     }
     
-    func getHeroesList(page: Page) {
+    func getHeroesList() {
         self.isLoading = true
         self.showErrorView = false
         let cancellable = self.getHeroesList(page: page)
@@ -40,8 +41,13 @@ class HeroeListVM: ObservableObject, HeroesService {
                 }
                 
             }) { (heroes) in
+                if heroes.data.count < 15 {
+                    self.showLoadMore = false
+                }
+                self.showLoadMore = true
                 self.isLoading = false
                 self.heroes = heroes.data.results
+                self.page.limit += 15
                 self.page.offset += 15
         }
         cancellables.insert(cancellable)

@@ -31,8 +31,19 @@ struct HeroeList: View {
                                 DefaultCell(heroe: heroe)
                             }
                         }
+                        if vm.showLoadMore{
+                            HStack {
+                                Button("Load more") {
+                                    vm.getHeroesList()
+                                    
+                                }
+                            }.listRowInsets(EdgeInsets())
+                            .frame(maxWidth: .infinity, minHeight: 60)
+                            .background(Color(UIColor.systemGroupedBackground))
+                        }
+                        
                     }.listStyle(.plain)
-                    .navigationTitle("Heroes")
+                        .navigationTitle("Heroes")
                 }
             }
         }
