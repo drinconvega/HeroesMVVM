@@ -14,7 +14,6 @@ struct HeroeDetail: View {
     var body: some View {
         ScrollView {
             VStack (spacing: 40) {
-                //Spacer(minLength: 40)
                 AsyncImage(url: URL(string: heroe.thumbnail.path+"."+heroe.thumbnail.thumbnailExtension.rawValue)) { image in
                     image.resizable()
                 } placeholder: {
@@ -24,9 +23,14 @@ struct HeroeDetail: View {
                 .frame(width: 100, height: 100)
                 .padding()
                 Text(heroe.name)
+                    .padding()
                 Spacer(minLength: 20)
                 Text(heroe.resultDescription)
+                    .padding()
             }
+        }
+        .onAppear {
+            vm.getHeroe(character: heroe)
         }
     }
 }

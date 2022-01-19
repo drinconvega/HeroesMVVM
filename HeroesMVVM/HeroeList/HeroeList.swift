@@ -21,7 +21,6 @@ struct HeroeList: View {
                         .cornerRadius(5)
                 }
                 
-                
                 List {
                     ForEach(vm.heroes, id: \.self) { heroe in
                         NavigationLink(destination: HeroeDetail(heroe: heroe)) {

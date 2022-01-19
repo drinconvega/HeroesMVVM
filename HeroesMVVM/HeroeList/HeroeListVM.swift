@@ -16,13 +16,14 @@ class HeroeListVM: ObservableObject, HeroesService {
     @Published var isLoading = false
     @Published var showErrorView = false
     @Published var showLoadMore = false
-    
+    private var dataManager: DataManager
     
     var cancellables = Set<AnyCancellable>()
     var page = Page(limit: 15, offset: 0)
     
-    init(apiSession: APIService = APISession()) {
+    init(apiSession: APIService = APISession(), dataManager: DataManager = DataManager.shared) {
         self.apiSession = apiSession
+        self.dataManager = dataManager
         getHeroesList()
     }
     
@@ -49,7 +50,12 @@ class HeroeListVM: ObservableObject, HeroesService {
                 self.page.limit += 15
                 self.page.offset += 15
                 self.heroes = heroes.data.results
-        }
+                
+                self.heroes.forEach { heroeLoop in
+                    self.dataManager.addOrUpdate(heroe: heroeLoop.toHeroModel())
+                }
+                
+            }
         cancellables.insert(cancellable)
     }
 }

@@ -28,6 +28,12 @@ struct Character: Codable, Hashable {
     static let previewHeroe = Character(id: 0000, name: "SuperPrueba", resultDescription:"Prueba de texto muy muy muy muy muy muy muy muy muy muy muy muy muy muy muy muy muy muy muy muy muy muy muy muy muy muy muy muy muy muy muy muy muy muy muy muy muy muy muy muy muy muy muy muy muy muy muy muy grande ", thumbnail: Thumbnail(path: "https://cdn-icons-png.flaticon.com/512/1705/1705780", thumbnailExtension: .png))
 }
 
+extension Character {
+    func toHeroModel() -> HeroeModel {
+        return HeroeModel(id: Int64(self.id), name: self.name, resultDescription: self.resultDescription)
+    }
+}
+
 // MARK: - Comics
 struct Comics: Codable, Hashable {
     let available: Int

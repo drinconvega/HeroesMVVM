@@ -11,11 +11,13 @@ import SwiftUI
 struct HeroesMVVMApp: App {
     
     @StateObject var vm = HeroeListVM()
+    @StateObject private var dataController = DataManager.shared
     
     var body: some Scene {
         WindowGroup {
             HeroeList()
                 .environmentObject(vm)
+                .environment(\.managedObjectContext, dataController.dbHelper.persistentContainer.viewContext)
         }
     }
 }

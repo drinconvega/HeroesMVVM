@@ -39,4 +39,27 @@ struct APISession: APIService {
             }
             .eraseToAnyPublisher()
     }
+    
+    func requestImage(with url: String) -> AnyPublisher<UIImage, APIError> {
+        guard let url = URL(string: url)
+            else {
+                return Fail(error: .decodingError(""))
+                    .eraseToAnyPublisher()
+        }
+        
+        return URLSession.shared.dataTaskPublisher(for: url)
+            .receive(on: DispatchQueue.main)
+            .mapError { _ in .unknown }
+            .flatMap { data, response -> AnyPublisher<UIImage, APIError> in
+                if let image = UIImage(data: data) {
+                    return Just(image)
+                        .mapError {error in .decodingError(error.localizedDescription) }
+                        .eraseToAnyPublisher()
+                }
+                return Fail(error: .unknown)
+                    .eraseToAnyPublisher()
+            }
+            .eraseToAnyPublisher()
+        
+    }
 }
