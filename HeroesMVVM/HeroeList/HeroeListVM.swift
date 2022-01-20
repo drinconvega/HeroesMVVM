@@ -34,6 +34,7 @@ class HeroeListVM: ObservableObject, HeroesService {
             self.heroes = heroes
             page.offset = heroes.count+30
             self.isLoading = false
+            self.showLoadMore = true
         }else{
             getHeroesListFromServer()
         }
