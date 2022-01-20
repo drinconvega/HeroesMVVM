@@ -21,7 +21,7 @@ class HeroeListVM: ObservableObject, HeroesService {
     var cancellables = Set<AnyCancellable>()
     var page = Page(limit: 30, offset: 0)
     
-    init(apiSession: APIService = APISession(), dataManager: DataManager = DataManager.shared) {
+    init(apiSession: APIService = APISession(), dataManager: DataManagerProtocol = DataManager.shared) {
         self.apiSession = apiSession
         self.dataManager = dataManager
         getHeroeList()
@@ -29,7 +29,7 @@ class HeroeListVM: ObservableObject, HeroesService {
     
     func getHeroeList() {
         self.isLoading = true
-        let heroes = dataManager.fetchHeroeList() as [HeroeModel]
+        let heroes = getHeroesFromDB()
         if heroes.count > 0 && heroes.count >= page.offset {
             self.heroes = heroes
             page.offset = heroes.count+30
@@ -38,6 +38,10 @@ class HeroeListVM: ObservableObject, HeroesService {
         }else{
             getHeroesListFromServer()
         }
+    }
+    
+    func getHeroesFromDB() -> [HeroeModel] {
+        return dataManager.fetchHeroeList() as [HeroeModel]
     }
     
     func getHeroesListFromServer() {

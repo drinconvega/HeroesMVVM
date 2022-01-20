@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9209CAB72799E01D00559434 /* HeroeListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9209CAB62799E01D00559434 /* HeroeListTests.swift */; };
+		9209CABB2799E62000559434 /* DataManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9209CABA2799E62000559434 /* DataManagerMock.swift */; };
+		9209CABD2799E74800559434 /* APISessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9209CABC2799E74800559434 /* APISessionMock.swift */; };
 		9227730F279970A600B28D1A /* Heroes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9227730D279970A600B28D1A /* Heroes.xcdatamodeld */; };
 		92FE54EA279199450058D214 /* HeroesMVVMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FE54E9279199450058D214 /* HeroesMVVMApp.swift */; };
 		92FE54EC279199450058D214 /* HeroeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FE54EB279199450058D214 /* HeroeList.swift */; };
@@ -20,10 +23,8 @@
 		92FE551E27959EE90058D214 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FE551D27959EE90058D214 /* Character.swift */; };
 		92FE552027959EF70058D214 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FE551F27959EF70058D214 /* Page.swift */; };
 		92FE55222795A1950058D214 /* HeroeListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FE55212795A1950058D214 /* HeroeListVM.swift */; };
-		92FE55232795A1950058D214 /* HeroeListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FE55212795A1950058D214 /* HeroeListVM.swift */; };
 		92FE55342795AF3E0058D214 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FE55332795AF3E0058D214 /* String+Extensions.swift */; };
 		92FE55382795E00B0058D214 /* HeroeDetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FE55372795E00B0058D214 /* HeroeDetailVM.swift */; };
-		92FE55392795E00B0058D214 /* HeroeDetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FE55372795E00B0058D214 /* HeroeDetailVM.swift */; };
 		92FE553E2796F2DF0058D214 /* APISession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FE553D2796F2DF0058D214 /* APISession.swift */; };
 		92FE55402796F2E70058D214 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FE553F2796F2E70058D214 /* APIError.swift */; };
 		92FE55422796F2F40058D214 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FE55412796F2F40058D214 /* APIService.swift */; };
@@ -59,6 +60,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9209CAB62799E01D00559434 /* HeroeListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroeListTests.swift; sourceTree = "<group>"; };
+		9209CABA2799E62000559434 /* DataManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerMock.swift; sourceTree = "<group>"; };
+		9209CABC2799E74800559434 /* APISessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISessionMock.swift; sourceTree = "<group>"; };
 		9227730E279970A600B28D1A /* Heroes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Heroes.xcdatamodel; sourceTree = "<group>"; };
 		92FE54E6279199450058D214 /* HeroesMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeroesMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92FE54E9279199450058D214 /* HeroesMVVMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesMVVMApp.swift; sourceTree = "<group>"; };
@@ -167,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				92FE54FA2791994B0058D214 /* HeroesMVVMTests.swift */,
+				9209CAB62799E01D00559434 /* HeroeListTests.swift */,
 			);
 			path = HeroesMVVMTests;
 			sourceTree = "<group>";
@@ -259,6 +264,7 @@
 		92FE553C2796F2CB0058D214 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				9209CABC2799E74800559434 /* APISessionMock.swift */,
 				92FE553D2796F2DF0058D214 /* APISession.swift */,
 				92FE553F2796F2E70058D214 /* APIError.swift */,
 				92FE55412796F2F40058D214 /* APIService.swift */,
@@ -288,6 +294,7 @@
 		92FE55592798328E0058D214 /* DataBase */ = {
 			isa = PBXGroup;
 			children = (
+				9209CABA2799E62000559434 /* DataManagerMock.swift */,
 				92FE555A279832B20058D214 /* DataManager.swift */,
 				92FE55602798713F0058D214 /* Persistence */,
 			);
@@ -451,9 +458,11 @@
 				9227730F279970A600B28D1A /* Heroes.xcdatamodeld in Sources */,
 				92FE55222795A1950058D214 /* HeroeListVM.swift in Sources */,
 				92FE55492796F3F40058D214 /* HeroesEndpoint.swift in Sources */,
+				9209CABB2799E62000559434 /* DataManagerMock.swift in Sources */,
 				92FE55402796F2E70058D214 /* APIError.swift in Sources */,
 				92FE551E27959EE90058D214 /* Character.swift in Sources */,
 				92FE55472796F3EB0058D214 /* HeroesService.swift in Sources */,
+				9209CABD2799E74800559434 /* APISessionMock.swift in Sources */,
 				92FE54EA279199450058D214 /* HeroesMVVMApp.swift in Sources */,
 				92FE5566279871710058D214 /* HeroeEntity.swift in Sources */,
 				92FE551427919F7B0058D214 /* HeroeDetail.swift in Sources */,
@@ -466,8 +475,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92FE55232795A1950058D214 /* HeroeListVM.swift in Sources */,
-				92FE55392795E00B0058D214 /* HeroeDetailVM.swift in Sources */,
+				9209CAB72799E01D00559434 /* HeroeListTests.swift in Sources */,
 				92FE54FB2791994B0058D214 /* HeroesMVVMTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -23,4 +23,6 @@ struct DataClass: Codable {
         case offset, limit, total, count
         case results = "results"
     }
+    
+    
 }
