@@ -24,7 +24,7 @@ class HeroeDetailVM: ObservableObject {
     }
     
     func getHeroe(heroe: HeroeModel) {
-        self.heroe = dataManager.fetchHeroe(id: heroe.id) ?? heroe
+        self.heroe = dataManager.fetchHeroe(heroe: heroe) ?? heroe
         if let imgData = self.heroe.imageData, !imgData.isEmpty {
             if let img = UIImage(data: imgData) {
                 self.avatar = Image(uiImage: img)

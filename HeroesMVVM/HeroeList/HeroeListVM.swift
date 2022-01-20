@@ -16,7 +16,7 @@ class HeroeListVM: ObservableObject, HeroesService {
     @Published var isLoading = false
     @Published var showErrorView = false
     @Published var showLoadMore = false
-    private var dataManager: DataManager
+    private var dataManager: DataManagerProtocol
     
     var cancellables = Set<AnyCancellable>()
     var page = Page(limit: 30, offset: 0)
@@ -29,7 +29,7 @@ class HeroeListVM: ObservableObject, HeroesService {
     
     func getHeroeList() {
         self.isLoading = true
-        let heroes = dataManager.fetchHeroeList()
+        let heroes = dataManager.fetchHeroeList() as [HeroeModel]
         if heroes.count > 0 && heroes.count >= page.offset {
             self.heroes = heroes
             page.offset = heroes.count+30

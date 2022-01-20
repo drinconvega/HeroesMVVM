@@ -7,7 +7,11 @@
 
 import Foundation
 
-public struct HeroeModel: Hashable {
+//Este protocolo es para usar solo en este modelo, de forma que la bd pueda usar protocolos
+//para testing y descoplarla de la vista
+protocol HeroModelProtocol{}
+
+public struct HeroeModel: Hashable, HeroModelProtocol {
     let id: Int64
     let name, resultDescription: String
     let imageURL: String

@@ -23,7 +23,7 @@ class DefaultCellVM: ObservableObject {
     }
     
     func getHeroeImg(heroe: HeroeModel) {
-        if let heroe = dataManager.fetchHeroe(id: heroe.id) {
+        if let heroe = dataManager.fetchHeroe(heroe: heroe) {
             if heroe.imageData?.isEmpty ?? true {
                 self.getHeroeSprite(heroe: heroe)
             }else{
