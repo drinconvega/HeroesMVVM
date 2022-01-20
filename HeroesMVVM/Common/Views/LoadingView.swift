@@ -9,9 +9,23 @@ import SwiftUI
 
 struct LoadingView: View {
     var body: some View {
-        ProgressView("Loading...")
-            .padding()
-            .progressViewStyle(.circular)    }
+        HStack{
+            Spacer()
+            VStack {
+                Spacer()
+                ProgressView("Loading...")
+                    .padding()
+                    .progressViewStyle(.circular)
+                    .background(Color(UIColor.gray))
+                    .cornerRadius(5)
+                Spacer()
+            }
+            Spacer()
+        }
+        .background(Color(UIColor.lightGray)
+                        .opacity(0.4))
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+    }
 }
 
 struct LoadingView_Previews: PreviewProvider {

@@ -16,7 +16,6 @@ struct HeroesMVVMApp: App {
     var body: some Scene {
         WindowGroup {
             HeroeList()
-                .environmentObject(vm)
                 .environment(\.managedObjectContext, dataController.dbHelper.persistentContainer.viewContext)
         }
     }

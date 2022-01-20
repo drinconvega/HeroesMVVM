@@ -9,16 +9,17 @@ import SwiftUI
 
 struct HeroeList: View {
     
-    @EnvironmentObject var vm : HeroeListVM
+    @ObservedObject var vm : HeroeListVM
+    
+    init() {
+        _vm = ObservedObject(wrappedValue: HeroeListVM())
+    }
     
     var body: some View {
         NavigationView {
             ZStack {
                 if vm.isLoading {
-                    LoadingView()
-                        .background(Color(UIColor.lightGray)
-                                        .opacity(0.1))
-                        .cornerRadius(5)
+                    LoadingView().zIndex(1)
                 }
                 
                 List {
