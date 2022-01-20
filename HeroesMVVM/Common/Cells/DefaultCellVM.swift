@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 import SwiftUI
+import Swinject
 
 class DefaultCellVM: ObservableObject {
     
@@ -17,9 +18,10 @@ class DefaultCellVM: ObservableObject {
     
     var cancellables = Set<AnyCancellable>()
     
-    init(apiSession: APIService = APISession(), dataManager: DataManager = DataManager.shared) {
+    init(heroe: HeroeModel, apiSession: APIService = APISession(), dataManager: DataManager = DataManager.shared) {
         self.dataManager = dataManager
         self.apiSession = apiSession
+        getHeroeImg(heroe: heroe)
     }
     
     func getHeroeImg(heroe: HeroeModel) {
@@ -38,9 +40,9 @@ class DefaultCellVM: ObservableObject {
         let cancellable = apiSession.requestImage(with: heroe.imageURL)
             .sink(receiveCompletion: { (result) in
                 print(result)
-            }) { (image) in
-                self.dataManager.update(heroe: HeroeModel(id: heroe.id, name: heroe.name, resultDescription: heroe.resultDescription, imageURL: heroe.imageURL, imageData: image.pngData()))
-                self.avatar = Image(uiImage: image)
+            }) { [weak self] (image) in
+                self?.dataManager.update(heroe: HeroeModel(id: heroe.id, name: heroe.name, resultDescription: heroe.resultDescription, imageURL: heroe.imageURL, imageData: image.pngData()))
+                self?.avatar = Image(uiImage: image)
         }
         
         cancellables.insert(cancellable)

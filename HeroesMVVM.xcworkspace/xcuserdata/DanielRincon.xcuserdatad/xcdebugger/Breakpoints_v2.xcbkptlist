@@ -3,31 +3,4 @@
    uuid = "B702E252-A73A-4488-90B1-3472BFA3D440"
    type = "0"
    version = "2.0">
-   <Breakpoints>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "00C53CC1-BBDD-43C5-A491-BE846C75D569"
-            shouldBeEnabled = "Yes"
-            condition = "heroe.imageURL == &quot;&quot;"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HeroesMVVM/HeroeDetail/HeroeDetailVM.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "getHeroeSprite(heroe:)"
-            landmarkType = "7">
-            <Actions>
-               <BreakpointActionProxy
-                  ActionExtensionID = "Xcode.BreakpointAction.DebuggerCommand">
-                  <ActionContent
-                     consoleCommand = "po heroe.name">
-                  </ActionContent>
-               </BreakpointActionProxy>
-            </Actions>
-         </BreakpointContent>
-      </BreakpointProxy>
-   </Breakpoints>
 </Bucket>

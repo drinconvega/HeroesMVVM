@@ -10,18 +10,17 @@ import SwiftUI
 struct DefaultCell: View {
     
     var heroe : HeroeModel
-    @ObservedObject var vm = DefaultCellVM()
+    @ObservedObject var vm : DefaultCellVM
+    
+    init(heroe: HeroeModel) {
+        self.heroe = heroe
+        _vm = ObservedObject(wrappedValue: DefaultCellVM(heroe: heroe))
+    }
     
     var body: some View {
         HStack {
             vm.avatar
-                .resizable()
-            /*AsyncImage(url: URL(string: heroe.thumbnail.path+"."+heroe.thumbnail.thumbnailExtension.rawValue)) { image in
-                image.resizable()
-                
-            } placeholder: {
-                Image(systemName: "person").resizable()
-            }*/
+            .resizable()
             .aspectRatio(contentMode: .fit)
             .frame(width: 60, height: 60)
             .padding(EdgeInsets.init(top: 0, leading: 10, bottom: 0, trailing: 20))
@@ -30,9 +29,6 @@ struct DefaultCell: View {
             Text(heroe.name)
                 .font(.headline)
             Spacer()
-        }
-        .onAppear {
-            vm.getHeroeImg(heroe: heroe)
         }
     }
 }
