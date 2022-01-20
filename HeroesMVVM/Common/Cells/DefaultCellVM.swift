@@ -22,10 +22,10 @@ class DefaultCellVM: ObservableObject {
         self.apiSession = apiSession
     }
     
-    func getHeroe(character: Character) {
-        if let heroe = dataManager.fetchHeroe(id: Int64(character.id)) {
+    func getHeroeImg(heroe: HeroeModel) {
+        if let heroe = dataManager.fetchHeroe(id: heroe.id) {
             if heroe.imageData?.isEmpty ?? true {
-                self.getHeroeSprite(heroe: heroe, urlString: character.thumbnail.path+"."+character.thumbnail.thumbnailExtension.rawValue)
+                self.getHeroeSprite(heroe: heroe)
             }else{
                 if let img = UIImage(data: heroe.imageData!) {
                     self.avatar = Image(uiImage: img)
@@ -34,12 +34,12 @@ class DefaultCellVM: ObservableObject {
         }
     }
     //Actualizamos la BD con la imagen descargada
-    func getHeroeSprite(heroe: HeroeModel, urlString: String) {
-        let cancellable = apiSession.requestImage(with: urlString)
+    func getHeroeSprite(heroe: HeroeModel) {
+        let cancellable = apiSession.requestImage(with: heroe.imageURL)
             .sink(receiveCompletion: { (result) in
                 print(result)
             }) { (image) in
-                self.dataManager.update(heroe: HeroeModel(id: heroe.id, name: heroe.name, resultDescription: heroe.resultDescription, imageData: image.pngData()))
+                self.dataManager.update(heroe: HeroeModel(id: heroe.id, name: heroe.name, resultDescription: heroe.resultDescription, imageURL: heroe.imageURL, imageData: image.pngData()))
                 self.avatar = Image(uiImage: image)
         }
         

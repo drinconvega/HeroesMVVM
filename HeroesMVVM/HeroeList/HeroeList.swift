@@ -30,8 +30,7 @@ struct HeroeList: View {
                     if vm.showLoadMore{
                         HStack {
                             Button("Load more") {
-                                vm.getHeroesList()
-                                
+                                vm.getHeroeList()
                             }
                         }.listRowInsets(EdgeInsets())
                             .frame(maxWidth: .infinity, minHeight: 60)
@@ -40,11 +39,10 @@ struct HeroeList: View {
                 }.listStyle(.plain)
                     .alert("Ups!, something went wrong", isPresented: $vm.showErrorView) {
                         Button("Retry") {
-                            vm.getHeroesList()
+                            vm.getHeroeList()
                         }
                     }
                     .navigationTitle("Heroes")
-                
             }
         }
     }

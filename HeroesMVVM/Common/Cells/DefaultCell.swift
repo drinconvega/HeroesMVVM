@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DefaultCell: View {
     
-    var heroe : Character
+    var heroe : HeroeModel
     @ObservedObject var vm = DefaultCellVM()
     
     var body: some View {
@@ -32,14 +32,14 @@ struct DefaultCell: View {
             Spacer()
         }
         .onAppear {
-            vm.getHeroe(character: heroe)
+            vm.getHeroeImg(heroe: heroe)
         }
     }
 }
 
 struct DefaultCell_Previews: PreviewProvider {
     static var previews: some View {
-        DefaultCell(heroe: Character.previewHeroe)
+        DefaultCell(heroe: HeroeModel.previewHeroe)
             .previewLayout(.fixed(width: 400, height: 60))
             .previewDisplayName("Default Cell")
     }

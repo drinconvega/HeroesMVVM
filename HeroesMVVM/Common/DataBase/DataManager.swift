@@ -41,8 +41,7 @@ class DataManager: ObservableObject {
 // MARK: - HeroeDataManagerProtocol
 extension DataManager {
     func fetchHeroeList() -> [HeroeModel] {
-        let predicate = NSPredicate()
-        let result: Result<[HeroeEntity], Error> = dbHelper.read(HeroeEntity.self, predicate: predicate, limit: nil)
+        let result: Result<[HeroeEntity], Error> = dbHelper.read(HeroeEntity.self, predicate: nil, limit: nil)
         switch result {
         case .success(let heroeEntities):
             return heroeEntities.map { $0.convertToHeroeModel() }
@@ -68,6 +67,7 @@ extension DataManager {
         newHeroe.id = heroe.id
         newHeroe.name = heroe.name
         newHeroe.resultDescription = heroe.resultDescription
+        newHeroe.imageURL = heroe.imageURL
         if let imageData = heroe.imageData{
             newHeroe.image = imageData
         }
@@ -84,6 +84,7 @@ extension DataManager {
             heroeEntity.id = heroe.id
             heroeEntity.name = heroe.name
             heroeEntity.resultDescription = heroe.resultDescription
+            heroeEntity.imageURL = heroe.imageURL
             if let imageData = heroe.imageData{
                 heroeEntity.image = imageData
             }
@@ -99,6 +100,7 @@ extension DataManager {
         heroeEntity.id = heroe.id
         heroeEntity.name = heroe.name
         heroeEntity.resultDescription = heroe.resultDescription
+        heroeEntity.imageURL = heroe.imageURL
         if let imageData = heroe.imageData{
             heroeEntity.image = imageData
         }

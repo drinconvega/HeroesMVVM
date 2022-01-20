@@ -12,22 +12,34 @@ import SwiftUI
 class HeroeListVM: ObservableObject, HeroesService {
     
     var apiSession: APIService
-    @Published var heroes = [Character]()
+    @Published var heroes = [HeroeModel]()
     @Published var isLoading = false
     @Published var showErrorView = false
     @Published var showLoadMore = false
     private var dataManager: DataManager
     
     var cancellables = Set<AnyCancellable>()
-    var page = Page(limit: 15, offset: 0)
+    var page = Page(limit: 30, offset: 0)
     
     init(apiSession: APIService = APISession(), dataManager: DataManager = DataManager.shared) {
         self.apiSession = apiSession
         self.dataManager = dataManager
-        getHeroesList()
+        getHeroeList()
     }
     
-    func getHeroesList() {
+    func getHeroeList() {
+        self.isLoading = true
+        let heroes = dataManager.fetchHeroeList()
+        if heroes.count > 0 && heroes.count >= page.offset {
+            self.heroes = heroes
+            page.offset = heroes.count+30
+            self.isLoading = false
+        }else{
+            getHeroesListFromServer()
+        }
+    }
+    
+    func getHeroesListFromServer() {
         self.isLoading = true
         self.showErrorView = false
         let cancellable = self.getHeroesList(page: page)
@@ -42,19 +54,22 @@ class HeroeListVM: ObservableObject, HeroesService {
                 }
                 
             }) { (heroes) in
-                if heroes.data.count < 15 {
+                
+                self.page.offset += 30
+                
+                let heroesMapped = heroes.data.results.map{ character -> HeroeModel in
+                    let heroe = character.toHeroModel()
+                    self.dataManager.addOrUpdate(heroe: heroe)
+                    return heroe
+                }
+                
+                if heroes.data.count < 30 {
                     self.showLoadMore = false
+                }else{
+                    self.showLoadMore = true
                 }
-                self.showLoadMore = true
                 self.isLoading = false
-                self.page.limit += 15
-                self.page.offset += 15
-                self.heroes = heroes.data.results
-                
-                self.heroes.forEach { heroeLoop in
-                    self.dataManager.addOrUpdate(heroe: heroeLoop.toHeroModel())
-                }
-                
+                self.heroes.append(contentsOf:heroesMapped)
             }
         cancellables.insert(cancellable)
     }

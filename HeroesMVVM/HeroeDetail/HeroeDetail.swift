@@ -8,17 +8,15 @@
 import SwiftUI
 
 struct HeroeDetail: View {
-    let heroe: Character
+    let heroe: HeroeModel
     @ObservedObject var vm = HeroeDetailVM()
     
     var body: some View {
         ScrollView {
             VStack (spacing: 40) {
-                AsyncImage(url: URL(string: heroe.thumbnail.path+"."+heroe.thumbnail.thumbnailExtension.rawValue)) { image in
-                    image.resizable()
-                } placeholder: {
-                    Image(systemName: "person.circle").resizable()
-                }
+                vm.avatar
+                .resizable()
+                .cornerRadius(15)
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 100, height: 100)
                 .padding()
@@ -30,7 +28,7 @@ struct HeroeDetail: View {
             }
         }
         .onAppear {
-            vm.getHeroe(character: heroe)
+            vm.getHeroe(heroe: heroe)
         }
     }
 }
@@ -40,9 +38,9 @@ struct HeroeDetail_Previews: PreviewProvider {
     
     static var previews: some View {
         Group {
-            HeroeDetail(heroe: Character.previewHeroe)
+            HeroeDetail(heroe: HeroeModel.previewHeroe)
                 .previewDevice("iPhone SE (2nd generation)")
-            HeroeDetail(heroe: Character.previewHeroe)
+            HeroeDetail(heroe: HeroeModel.previewHeroe)
                 .previewDevice("iPhone 13 Pro Max")
         }
     }

@@ -18,7 +18,7 @@ final class CoreDataHelper {
     
     private init() { }
     
-    lazy var persistentContainer: NSPersistentCloudKitContainer = {
+    var persistentContainer: NSPersistentCloudKitContainer = {
         let container = NSPersistentCloudKitContainer(name: "Heroes")
         container.loadPersistentStores { (storeDescription, error) in
             if let error = error as NSError? {

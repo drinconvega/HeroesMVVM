@@ -30,7 +30,7 @@ struct Character: Codable, Hashable {
 
 extension Character {
     func toHeroModel() -> HeroeModel {
-        return HeroeModel(id: Int64(self.id), name: self.name, resultDescription: self.resultDescription)
+        return HeroeModel(id: Int64(self.id), name: self.name, resultDescription: self.resultDescription, imageURL: self.thumbnail.path+"."+self.thumbnail.thumbnailExtension.rawValue)
     }
 }
 

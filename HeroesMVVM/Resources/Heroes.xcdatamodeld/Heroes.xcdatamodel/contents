@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="20G314" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="HeroeEntity" representedClassName="HeroeEntity" syncable="YES">
-        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="image" optional="YES" attributeType="Binary"/>
+        <attribute name="imageURL" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="resultDescription" optional="YES" attributeType="String"/>
         <uniquenessConstraints>
@@ -12,6 +13,6 @@
         </uniquenessConstraints>
     </entity>
     <elements>
-        <element name="HeroeEntity" positionX="-63" positionY="-18" width="128" height="103"/>
+        <element name="HeroeEntity" positionX="-63" positionY="-18" width="128" height="104"/>
     </elements>
 </model>
