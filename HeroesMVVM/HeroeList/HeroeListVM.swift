@@ -11,15 +11,16 @@ import SwiftUI
 
 class HeroeListVM: ObservableObject, HeroesService {
     
-    var apiSession: APIService
     @Published var heroes = [HeroeModel]()
     @Published var isLoading = false
     @Published var showErrorView = false
     @Published var showLoadMore = false
+    
+    internal var apiSession: APIService
     private var dataManager: DataManagerProtocol
     
-    var cancellables = Set<AnyCancellable>()
-    var page = Page(limit: 30, offset: 0)
+    private var cancellables = Set<AnyCancellable>()
+    private var page = Page(limit: 30, offset: 0)
     
     init(apiSession: APIService = APISession(), dataManager: DataManagerProtocol = DataManager.shared) {
         self.apiSession = apiSession
