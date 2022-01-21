@@ -33,6 +33,8 @@ struct HeroeList: View {
                             Button("Load more") {
                                 vm.getHeroeList()
                             }
+                            .buttonStyle(DefaultButton())
+                            
                         }.listRowInsets(EdgeInsets())
                             .frame(maxWidth: .infinity, minHeight: 60)
                             .background(Color(UIColor.systemGroupedBackground))

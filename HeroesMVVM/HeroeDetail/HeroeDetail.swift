@@ -37,7 +37,8 @@ struct HeroeDetail: View {
                     Spacer()
                     Button("Reload") {
                         vm.getHeroeFromServer()
-                    }.padding()
+                    }
+                    .buttonStyle(DefaultButton())
                     .alert("Ups!, something went wrong", isPresented: $vm.showErrorView) {
                         Button("Retry") {
                             vm.getHeroe(heroe: heroe)
