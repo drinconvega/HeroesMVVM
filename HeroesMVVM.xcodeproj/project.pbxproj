@@ -11,6 +11,7 @@
 		9209CABB2799E62000559434 /* DataManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9209CABA2799E62000559434 /* DataManagerMock.swift */; };
 		9209CABD2799E74800559434 /* APISessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9209CABC2799E74800559434 /* APISessionMock.swift */; };
 		9209CABF279AE29900559434 /* HeroeDetailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9209CABE279AE29900559434 /* HeroeDetailTests.swift */; };
+		9209CAC1279B5EA200559434 /* HeroeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9209CAC0279B5EA200559434 /* HeroeService.swift */; };
 		9227730F279970A600B28D1A /* Heroes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9227730D279970A600B28D1A /* Heroes.xcdatamodeld */; };
 		92FE54EA279199450058D214 /* HeroesMVVMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FE54E9279199450058D214 /* HeroesMVVMApp.swift */; };
 		92FE54EC279199450058D214 /* HeroeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FE54EB279199450058D214 /* HeroeList.swift */; };
@@ -65,6 +66,7 @@
 		9209CABA2799E62000559434 /* DataManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerMock.swift; sourceTree = "<group>"; };
 		9209CABC2799E74800559434 /* APISessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISessionMock.swift; sourceTree = "<group>"; };
 		9209CABE279AE29900559434 /* HeroeDetailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroeDetailTests.swift; sourceTree = "<group>"; };
+		9209CAC0279B5EA200559434 /* HeroeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroeService.swift; sourceTree = "<group>"; };
 		9227730E279970A600B28D1A /* Heroes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Heroes.xcdatamodel; sourceTree = "<group>"; };
 		92FE54E6279199450058D214 /* HeroesMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeroesMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92FE54E9279199450058D214 /* HeroesMVVMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesMVVMApp.swift; sourceTree = "<group>"; };
@@ -280,6 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				92FE55462796F3EB0058D214 /* HeroesService.swift */,
+				9209CAC0279B5EA200559434 /* HeroeService.swift */,
 				92FE55482796F3F40058D214 /* HeroesEndpoint.swift */,
 			);
 			path = HeroesAPI;
@@ -457,6 +460,7 @@
 				92FE55382795E00B0058D214 /* HeroeDetailVM.swift in Sources */,
 				92FE5554279729810058D214 /* ErrorView.swift in Sources */,
 				92FE55622798714C0058D214 /* DBHelper.swift in Sources */,
+				9209CAC1279B5EA200559434 /* HeroeService.swift in Sources */,
 				92FE55422796F2F40058D214 /* APIService.swift in Sources */,
 				9227730F279970A600B28D1A /* Heroes.xcdatamodeld in Sources */,
 				92FE55222795A1950058D214 /* HeroeListVM.swift in Sources */,

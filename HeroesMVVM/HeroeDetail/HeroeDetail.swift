@@ -14,22 +14,38 @@ struct HeroeDetail: View {
     
     var body: some View {
         ScrollView {
-            VStack (spacing: 40) {
-                Image(uiImage: image)
-                .resizable()
-                .cornerRadius(15)
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 100, height: 100)
-                .padding()
-                .onReceive(vm.$avatar) { data in
-                    self.image = UIImage(data: data) ?? UIImage()
+            ZStack{
+                if vm.isLoading {
+                    LoadingView().zIndex(1)
                 }
-                Text(heroe.name)
+                
+                VStack (spacing: 40) {
+                    Image(uiImage: image)
+                    .resizable()
+                    .cornerRadius(15)
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 100, height: 100)
                     .padding()
-                Spacer(minLength: 20)
-                Text(heroe.resultDescription)
-                    .padding()
+                    .onReceive(vm.$avatar) { data in
+                        self.image = UIImage(data: data) ?? UIImage()
+                    }
+                    Text(heroe.name)
+                        .padding()
+                    Spacer(minLength: 20)
+                    Text(heroe.resultDescription)
+                        .padding()
+                    Spacer()
+                    Button("Reload") {
+                        vm.getHeroeFromServer()
+                    }.padding()
+                    .alert("Ups!, something went wrong", isPresented: $vm.showErrorView) {
+                        Button("Retry") {
+                            vm.getHeroe(heroe: heroe)
+                        }
+                    }
+                }
             }
+            
         }
         .onAppear {
             vm.getHeroe(heroe: heroe)

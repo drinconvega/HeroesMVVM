@@ -8,10 +8,13 @@
 import Foundation
 import Combine
 
-class HeroeDetailVM: ObservableObject {
+class HeroeDetailVM: ObservableObject, HeroeService {
     
     @Published var heroe = HeroeModel()
     @Published var avatar = Data()
+    @Published var isLoading = false
+    @Published var showErrorView = false
+    
     var apiSession: APIService
     private var dataManager: DataManagerProtocol
     
@@ -41,6 +44,37 @@ class HeroeDetailVM: ObservableObject {
                 self.avatar = image
             }
         
+        cancellables.insert(cancellable)
+    }
+    
+    func getHeroeFromServer() {
+        self.isLoading = true
+        self.showErrorView = false
+        let cancellable = self.getHeroe(heroe: self.heroe)
+            .sink(receiveCompletion: { result in
+                self.isLoading = false
+                switch result {
+                case .failure(let error):
+                    self.showErrorView = true
+                    print("Handle error: \(error)")
+                case .finished:
+                    break
+                }
+                
+            }) { (heroes) in
+                
+                let heroesMapped = heroes.data.results.map{ character -> HeroeModel in
+                    let heroe = character.toHeroModel()
+                    self.dataManager.addOrUpdate(heroe: heroe)
+                    return heroe
+                }
+                
+                self.isLoading = false
+                if let heroe = heroesMapped.first {
+                    self.heroe = heroe
+                }
+                
+            }
         cancellables.insert(cancellable)
     }
     

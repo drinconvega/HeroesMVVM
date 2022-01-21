@@ -69,7 +69,7 @@ extension HeroesEndpoint: RequestBuilder {
         case .heroes(heroe: let heroe):
             
             guard let request = self.createURLFromParameters(parameters: nil,
-                                                             url: "\(HeroesEndpoint.baseURL)\(HeroesEndpoint.endpoint.characters.rawValue)+\(heroe.id)",
+                                                             url: "\(HeroesEndpoint.baseURL)\(HeroesEndpoint.endpoint.characters.rawValue)/\(heroe.id)",
                                                              securityParams: true)
                 else {preconditionFailure("Invalid URL format")}
             return request
