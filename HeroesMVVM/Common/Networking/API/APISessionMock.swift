@@ -17,8 +17,8 @@ struct APISessionMock: APIService {
             .eraseToAnyPublisher()
     }
     
-    func requestImage(with url: String) -> AnyPublisher<UIImage, APIError> {
-        return Just(UIImage(systemName: "person") ?? UIImage())
+    func requestImage(with url: String) -> AnyPublisher<Data, APIError> {
+        return Just((UIImage(systemName: "person")?.pngData() ?? UIImage().pngData()) ?? Data())
             .mapError {error in .decodingError(error.localizedDescription) }
             .eraseToAnyPublisher()
     }

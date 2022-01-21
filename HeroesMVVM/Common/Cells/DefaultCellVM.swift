@@ -7,11 +7,10 @@
 
 import Foundation
 import Combine
-import SwiftUI
 
 class DefaultCellVM: ObservableObject {
     
-    @Published var avatar = Image(systemName: "person")
+    @Published var avatar = Data()
     var apiSession: APIService
     private var dataManager: DataManager
     
@@ -25,12 +24,10 @@ class DefaultCellVM: ObservableObject {
     
     func getHeroeImg(heroe: HeroeModel) {
         if let heroe = dataManager.fetchHeroe(heroe: heroe) {
-            if heroe.imageData?.isEmpty ?? true {
-                self.getHeroeSprite(heroe: heroe)
+            if let imgData = heroe.imageData, !imgData.isEmpty {
+                self.avatar = imgData
             }else{
-                if let img = UIImage(data: heroe.imageData!) {
-                    self.avatar = Image(uiImage: img)
-                }
+                self.getHeroeSprite(heroe: heroe)
             }
         }
     }
@@ -40,8 +37,8 @@ class DefaultCellVM: ObservableObject {
             .sink(receiveCompletion: { (result) in
                 print(result)
             }) { [weak self] (image) in
-                self?.dataManager.update(heroe: HeroeModel(id: heroe.id, name: heroe.name, resultDescription: heroe.resultDescription, imageURL: heroe.imageURL, imageData: image.pngData()))
-                self?.avatar = Image(uiImage: image)
+                self?.dataManager.update(heroe: HeroeModel(id: heroe.id, name: heroe.name, resultDescription: heroe.resultDescription, imageURL: heroe.imageURL, imageData: image))
+                self?.avatar = image
         }
         
         cancellables.insert(cancellable)

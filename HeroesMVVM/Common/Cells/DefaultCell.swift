@@ -11,6 +11,7 @@ struct DefaultCell: View {
     
     var heroe : HeroeModel
     @ObservedObject var vm : DefaultCellVM
+    @State var image: UIImage = UIImage(systemName: "person")!
     
     init(heroe: HeroeModel) {
         self.heroe = heroe
@@ -19,12 +20,14 @@ struct DefaultCell: View {
     
     var body: some View {
         HStack {
-            vm.avatar
+            Image(uiImage: image)
             .resizable()
             .aspectRatio(contentMode: .fit)
             .frame(width: 60, height: 60)
             .padding(EdgeInsets.init(top: 0, leading: 10, bottom: 0, trailing: 20))
-            
+            .onReceive(vm.$avatar) { data in
+                self.image = UIImage(data: data) ?? UIImage()
+            }
             
             Text(heroe.name)
                 .font(.headline)

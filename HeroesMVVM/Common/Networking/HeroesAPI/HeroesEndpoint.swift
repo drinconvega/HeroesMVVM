@@ -9,6 +9,7 @@ import Foundation
 
 enum HeroesEndpoint {
     case heroesList(page: Page)
+    case heroes(heroe: HeroeModel)
 }
 
 extension HeroesEndpoint: RequestBuilder {
@@ -34,12 +35,12 @@ extension HeroesEndpoint: RequestBuilder {
         return parameters
     }
     
-    func createURLFromParameters(parameters: [String:String], url: String, securityParams : Bool=true) -> URLRequest? {
+    func createURLFromParameters(parameters: [String:String]?, url: String, securityParams : Bool=true) -> URLRequest? {
         
         guard var components = URLComponents(string: url) else {
             return nil
         }
-        components.queryItems = parameters.map { (key, value) in
+        components.queryItems = parameters?.map { (key, value) in
             URLQueryItem(name: key, value: value)
         }
         if securityParams {
@@ -63,6 +64,13 @@ extension HeroesEndpoint: RequestBuilder {
             guard let request = self.createURLFromParameters(parameters: params,
                                                              url: "\(HeroesEndpoint.baseURL)\(HeroesEndpoint.endpoint.characters.rawValue)",
                                                              securityParams: false)
+                else {preconditionFailure("Invalid URL format")}
+            return request
+        case .heroes(heroe: let heroe):
+            
+            guard let request = self.createURLFromParameters(parameters: nil,
+                                                             url: "\(HeroesEndpoint.baseURL)\(HeroesEndpoint.endpoint.characters.rawValue)+\(heroe.id)",
+                                                             securityParams: true)
                 else {preconditionFailure("Invalid URL format")}
             return request
         }

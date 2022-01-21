@@ -13,12 +13,18 @@ protocol HeroesService {
     var apiSession: APIService {get}
     
     func getHeroesList(page: Page) -> AnyPublisher<CharacterResponse, APIError>
+    func getHeroesList(page: HeroeModel) -> AnyPublisher<CharacterResponse, APIError>
 }
 
 extension HeroesService {
     
     func getHeroesList(page: Page) -> AnyPublisher<CharacterResponse, APIError> {
         return apiSession.request(with: HeroesEndpoint.heroesList(page: page))
+            .eraseToAnyPublisher()
+    }
+    
+    func getHeroesList(heroe: HeroeModel) -> AnyPublisher<CharacterResponse, APIError> {
+        return apiSession.request(with: HeroesEndpoint.heroes(heroe: heroe))
             .eraseToAnyPublisher()
     }
     

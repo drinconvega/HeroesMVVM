@@ -10,16 +10,20 @@ import SwiftUI
 struct HeroeDetail: View {
     let heroe: HeroeModel
     @ObservedObject var vm = HeroeDetailVM()
+    @State var image: UIImage = UIImage(systemName: "person")!
     
     var body: some View {
         ScrollView {
             VStack (spacing: 40) {
-                vm.avatar
+                Image(uiImage: image)
                 .resizable()
                 .cornerRadius(15)
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 100, height: 100)
                 .padding()
+                .onReceive(vm.$avatar) { data in
+                    self.image = UIImage(data: data) ?? UIImage()
+                }
                 Text(heroe.name)
                     .padding()
                 Spacer(minLength: 20)
