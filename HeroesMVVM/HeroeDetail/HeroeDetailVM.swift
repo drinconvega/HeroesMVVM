@@ -14,11 +14,11 @@ class HeroeDetailVM: ObservableObject {
     @Published var heroe = HeroeModel()
     @Published var avatar = Image(systemName: "person")
     var apiSession: APIService
-    private var dataManager: DataManager
+    private var dataManager: DataManagerProtocol
     
     var cancellables = Set<AnyCancellable>()
     
-    init(apiSession: APIService = APISession(), dataManager: DataManager = DataManager.shared) {
+    init(apiSession: APIService = APISession(), dataManager: DataManagerProtocol = DataManager.shared) {
         self.dataManager = dataManager
         self.apiSession = apiSession
     }

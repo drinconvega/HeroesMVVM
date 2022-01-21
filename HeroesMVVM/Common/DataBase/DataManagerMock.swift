@@ -13,7 +13,8 @@ struct DataManagerMock: HeroeDataManagerProtocol {
     }
     
     func fetchHeroe<T>(heroe: T) -> T? where T : HeroModelProtocol {
-        return HeroeModel.previewHeroe as? T
+        let heroe = HeroeModel(id: 0000, name: "Hola", resultDescription: "", imageURL: "")
+        return heroe as? T
     }
     
     func addHeroe<T>(heroe: T) where T : HeroModelProtocol {

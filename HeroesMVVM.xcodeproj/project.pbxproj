@@ -10,6 +10,7 @@
 		9209CAB72799E01D00559434 /* HeroeListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9209CAB62799E01D00559434 /* HeroeListTests.swift */; };
 		9209CABB2799E62000559434 /* DataManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9209CABA2799E62000559434 /* DataManagerMock.swift */; };
 		9209CABD2799E74800559434 /* APISessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9209CABC2799E74800559434 /* APISessionMock.swift */; };
+		9209CABF279AE29900559434 /* HeroeDetailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9209CABE279AE29900559434 /* HeroeDetailTests.swift */; };
 		9227730F279970A600B28D1A /* Heroes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9227730D279970A600B28D1A /* Heroes.xcdatamodeld */; };
 		92FE54EA279199450058D214 /* HeroesMVVMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FE54E9279199450058D214 /* HeroesMVVMApp.swift */; };
 		92FE54EC279199450058D214 /* HeroeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FE54EB279199450058D214 /* HeroeList.swift */; };
@@ -63,6 +64,7 @@
 		9209CAB62799E01D00559434 /* HeroeListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroeListTests.swift; sourceTree = "<group>"; };
 		9209CABA2799E62000559434 /* DataManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerMock.swift; sourceTree = "<group>"; };
 		9209CABC2799E74800559434 /* APISessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISessionMock.swift; sourceTree = "<group>"; };
+		9209CABE279AE29900559434 /* HeroeDetailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroeDetailTests.swift; sourceTree = "<group>"; };
 		9227730E279970A600B28D1A /* Heroes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Heroes.xcdatamodel; sourceTree = "<group>"; };
 		92FE54E6279199450058D214 /* HeroesMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeroesMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92FE54E9279199450058D214 /* HeroesMVVMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesMVVMApp.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 			children = (
 				92FE54FA2791994B0058D214 /* HeroesMVVMTests.swift */,
 				9209CAB62799E01D00559434 /* HeroeListTests.swift */,
+				9209CABE279AE29900559434 /* HeroeDetailTests.swift */,
 			);
 			path = HeroesMVVMTests;
 			sourceTree = "<group>";
@@ -477,6 +480,7 @@
 			files = (
 				9209CAB72799E01D00559434 /* HeroeListTests.swift in Sources */,
 				92FE54FB2791994B0058D214 /* HeroesMVVMTests.swift in Sources */,
+				9209CABF279AE29900559434 /* HeroeDetailTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
