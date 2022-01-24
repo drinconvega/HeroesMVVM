@@ -130,6 +130,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		92BBAAEC279F2C1A00F57396 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				92FE554A2796F67A0058D214 /* CharacterResponse.swift */,
+				92FE551D27959EE90058D214 /* Character.swift */,
+				92FE551F27959EF70058D214 /* Page.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		92BBAAED279F2C2200F57396 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				92FE555E279863A80058D214 /* HeroeModel.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		92BBAAEE279F2C3200F57396 /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				92FE5565279871710058D214 /* HeroeEntity.swift */,
+			);
+			path = DataBase;
+			sourceTree = "<group>";
+		};
+		92BBAAEF279F30DE00F57396 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				92FE55182791A0830058D214 /* HeroeDetail */,
+				92FE55172791A06F0058D214 /* HeroeList */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		92FE54DD279199450058D214 = {
 			isa = PBXGroup;
 			children = (
@@ -153,13 +188,12 @@
 		92FE54E8279199450058D214 /* HeroesMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				92BBAAEF279F30DE00F57396 /* Views */,
+				92FE551C27959ECC0058D214 /* Model */,
+				92FE551A2791B4B30058D214 /* Common */,
+				92FE55192791A0960058D214 /* Resources */,
 				92FE552F2795A6ED0058D214 /* Info.plist */,
 				92FE54E9279199450058D214 /* HeroesMVVMApp.swift */,
-				92FE551A2791B4B30058D214 /* Common */,
-				92FE551C27959ECC0058D214 /* Model */,
-				92FE55182791A0830058D214 /* HeroeDetail */,
-				92FE55172791A06F0058D214 /* HeroeList */,
-				92FE55192791A0960058D214 /* Resources */,
 				92FE54EF2791994A0058D214 /* Preview Content */,
 			);
 			path = HeroesMVVM;
@@ -243,10 +277,9 @@
 		92FE551C27959ECC0058D214 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				92FE551F27959EF70058D214 /* Page.swift */,
-				92FE551D27959EE90058D214 /* Character.swift */,
-				92FE554A2796F67A0058D214 /* CharacterResponse.swift */,
-				92FE555E279863A80058D214 /* HeroeModel.swift */,
+				92BBAAEE279F2C3200F57396 /* DataBase */,
+				92BBAAED279F2C2200F57396 /* Domain */,
+				92BBAAEC279F2C1A00F57396 /* API */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -315,7 +348,6 @@
 			children = (
 				92FE55612798714C0058D214 /* DBHelper.swift */,
 				92FE5563279871590058D214 /* CoreDataHelper.swift */,
-				92FE5565279871710058D214 /* HeroeEntity.swift */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
